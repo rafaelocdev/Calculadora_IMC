@@ -1,1 +1,51 @@
-﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <form action>
+                <h1>Calculadora IMC</h1>
+                <div class="container-peso">
+                    <p>Peso (kg)</p>
+                    <div class="inputs">
+                        <input class="input-slider" type="range">
+                        <input id="peso" class="input-text" type="text">
+                    </div>
+                </div>
+                <div class="container-altura">
+                    <p>Altura (cm)</p>
+                    <div class="inputs">
+                        <input class="input-slider" type="range">
+                        <input id="altura" class="input-text" type="text">
+                    </div>
+                </div>
+                <div class="resultado">
+                    <p id="O-seu-IMC-é">O seu IMC é:</p>
+                    <p id="imc-calculado"></p>
+                    <div id="classificacao-imc">
+                        <p id="mensagem-imc"></p>
+                    </div>
+                </div>
+                <div>
+                    <input id="btnCalcular" class="botao-calcular" type="button" value="Calcular">
+                </div>
+            </form>
+        </section>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
