@@ -1,8 +1,12 @@
 let botaoCalcular = document.getElementById('btnCalcular');
+let sliderPeso = document.getElementById('slider-peso');
+let sliderAltura = document.getElementById('slider-altura');
+let textPeso = document.getElementById('text-peso');
+let textAltura = document.getElementById('text-altura');
 
 function calculandoIMC() {
-    let peso = document.getElementById('peso').value;
-    let altura = document.getElementById('altura').value / 100;
+    let peso = textPeso.value;
+    let altura = textAltura.value / 100;
     let imcCalculado = document.getElementById('imc-calculado');
     let classificacaoIMC = document.getElementById('mensagem-imc')
     let tabIMC = [{ valor: 18.5, classificacao: 'Abaixo do peso' },
@@ -10,7 +14,7 @@ function calculandoIMC() {
     { valor: 30, classificacao: 'Sobrepeso' },
     { valor: 35, classificacao: 'Obesidade grau I' },
     { valor: 40, classificacao: 'Obesidade grau II' },
-    { valor: 200, classificacao: 'Obesidade grau III ou mórbida' }
+    { valor: 500, classificacao: 'Obesidade grau III ou mórbida' }
     ]
 
     if (peso == '' || altura == '') {
@@ -28,8 +32,31 @@ function calculandoIMC() {
     }
 }
 
-function slider() {
-
+function Text_Peso_Change() {
+    textPeso.value = sliderPeso.value;
 }
 
+function Text_Altura_Change() {
+    textAltura.value = sliderAltura.value;
+}
+
+/*
+function Slider_Peso_Change() {
+    sliderPeso.value = textPeso.value;
+}
+
+function Slider_Altura_Change() {
+    if (textPeso.value == '') {
+        sliderPeso.value = 0;
+    } else {
+        sliderAltura.value = textPeso.value;
+    }
+}
+*/
+
+
+
 botaoCalcular.addEventListener('click', calculandoIMC);
+sliderPeso.addEventListener('input', Text_Peso_Change);
+sliderAltura.addEventListener('input', Text_Altura_Change);
+//textPeso.addEventListener('change', Slider_Peso_Change)
