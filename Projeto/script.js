@@ -6,7 +6,7 @@ let textAltura = document.getElementById('text-altura');
 
 function calculandoIMC() {
     let peso = textPeso.value;
-    let altura = textAltura.value / 100;
+    let altura = textAltura.value;
     let imcCalculado = document.getElementById('imc-calculado');
     let classificacaoIMC = document.getElementById('mensagem-imc')
     let tabIMC = [{ valor: 18.5, classificacao: 'Abaixo do peso' },
@@ -33,14 +33,14 @@ function calculandoIMC() {
 }
 
 function Text_Peso_Change() {
-    textPeso.value = sliderPeso.value;
+    textPeso.value = parseFloat(sliderPeso.value);
 }
 
 function Text_Altura_Change() {
     textAltura.value = sliderAltura.value;
 }
 
-/*
+
 function Slider_Peso_Change() {
     sliderPeso.value = textPeso.value;
 }
@@ -52,11 +52,11 @@ function Slider_Altura_Change() {
         sliderAltura.value = textPeso.value;
     }
 }
-*/
+
 
 
 
 botaoCalcular.addEventListener('click', calculandoIMC);
 sliderPeso.addEventListener('input', Text_Peso_Change);
 sliderAltura.addEventListener('input', Text_Altura_Change);
-//textPeso.addEventListener('change', Slider_Peso_Change)
+textPeso.addEventListener('input', Slider_Peso_Change)
