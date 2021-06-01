@@ -8,6 +8,7 @@ body{
 
 h1{
     font-family: 'Arial';
+    font-size: 30px;
     text-align: center;
     margin: 0;
     margin-bottom: 40px;
@@ -19,6 +20,12 @@ p {
 }
 
 .container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     font-family: 'Mukta', sans-serif;
     padding: 20px;
     font-size: 20px;
@@ -78,7 +85,7 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    top: 110px;
+    top: 350px;
     margin: auto;
 }
 
