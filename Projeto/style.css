@@ -4,10 +4,10 @@ body{
     display: flex;
     justify-content: center;
     background-color: rgb(185, 218, 238);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h1{
-    font-family: 'Arial';
     font-size: 30px;
     text-align: center;
     margin: 0;
