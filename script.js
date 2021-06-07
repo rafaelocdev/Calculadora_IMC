@@ -36,27 +36,20 @@ function Text_Peso_Change() {
     textPeso.value = parseFloat(sliderPeso.value);
 }
 
-function Text_Altura_Change() {
-    textAltura.value = sliderAltura.value;
-}
-
-
 function Slider_Peso_Change() {
     sliderPeso.value = textPeso.value;
 }
 
-function Slider_Altura_Change() {
-    if (textPeso.value == '') {
-        sliderPeso.value = 0;
-    } else {
-        sliderAltura.value = textPeso.value;
-    }
+function Text_Altura_Change() {
+    textAltura.value = parseFloat(sliderAltura.value);
 }
 
-
-
+function Slider_Altura_Change() {
+    sliderAltura.value = textAltura.value;
+}
 
 botaoCalcular.addEventListener('click', calculandoIMC);
 sliderPeso.addEventListener('input', Text_Peso_Change);
 sliderAltura.addEventListener('input', Text_Altura_Change);
 textPeso.addEventListener('input', Slider_Peso_Change)
+textAltura.addEventListener('input', Slider_Altura_Change)
